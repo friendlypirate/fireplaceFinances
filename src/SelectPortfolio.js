@@ -6,9 +6,9 @@ const SelectPortfolio = (props) => {
 
     return (
         <form>
-        <label>
+        <label htmlFor="choosePortfolio">
           Pick your risk profile:
-          <select onChange={handleChange}>
+          <select name="choosePortfolio" onChange={handleChange}>
             <option value="conservative">Conservative</option>
             <option value="moderate">Moderate</option>
             <option value="aggressive">Aggressive</option>

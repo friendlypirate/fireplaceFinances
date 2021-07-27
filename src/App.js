@@ -5,6 +5,7 @@ import SelectPortfolio from './SelectPortfolio'
 import SpendSave from './SpendSave'
 import DisplayPortfolioValues from './DisplayPortfolioValues';
 import AppMode from './AppMode'
+import ChatContainer from './ChatContainer'
 
 function App() {
   const [appMode, setAppMode] = useState("")
@@ -30,6 +31,7 @@ function App() {
       {
         save !== 0 || spend !==0 ? (<DisplayPortfolioValues save={save} spend={spend} portfolioParams={portfolioParams}/>) : null
       }
+      <ChatContainer />
     </div>
   );
 }

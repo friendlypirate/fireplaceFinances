@@ -27,6 +27,7 @@ const SpendSave = (props) => {
           onChange={handleChange}
           required
         />
+       
       <label>How much did you save today?</label>
         <input
           type="number"
