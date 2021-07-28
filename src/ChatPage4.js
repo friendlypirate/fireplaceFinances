@@ -1,3 +1,4 @@
+//The last component to Chat, it houses a two functions, one that uses a known formula to get a random variable in a normal distribution given Mean and SD.  The Other function Simulations uses the first function to generate an array of yearly gains that we then use to figure out ending portfolio value.  It does this 1000 times thus producing our Monte Carlo simulation.  The rest of the functions are used show vital information to the user.
 const ChatPage4 = (props) => {
     const { retirementYears, annualSavings, amountSaved, marketParams, retirementAmount } = props
     const monteCarloSimulations = []
@@ -26,7 +27,6 @@ const ChatPage4 = (props) => {
             i++
         }
         monteCarloSimulations.sort((a, b) => b - a)
-        return Promise.resolve()
     }
 
     simulations(+retirementYears, +annualSavings, +amountSaved, marketParams[0], marketParams[1])
@@ -36,13 +36,12 @@ const ChatPage4 = (props) => {
     let percentageSuccess = (monteCarloSimulations.findIndex(x => x < retirementAmount) / 10).toFixed(2)
     let averagePortfolioValue = monteCarloSimulations.reduce((a, b) => a = a + b) / 1000
 
-
     return (
         <div className="chatPage chatPage4">
             <h2>Monte Carlo Simulation Results</h2>
             <ul>
-                <li>Probability of Success: {percentageSuccess}%</li>
-                <li>Average value of Portfolio: ${averagePortfolioValue.toLocaleString()}</li>
+                <li>Probability of Success: {percentageSuccess < 0 ? "100" : percentageSuccess}%</li>
+                <li>Average value: ${averagePortfolioValue.toLocaleString()}</li>
                 <li>90th Percentile Value: ${percentile(10).toLocaleString()}</li>
                 <li>75th Percentile Value: ${percentile(25).toLocaleString()}</li>
                 <li>50th Percentile Value: ${percentile(50).toLocaleString()}</li>

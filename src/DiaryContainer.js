@@ -4,6 +4,7 @@ import SelectPortfolio from './SelectPortfolio'
 import SpendSave from './SpendSave'
 import DisplayPortfolioValues from './DisplayPortfolioValues';
 
+//DiaryContainer houses our Save/Spend portion of the app, calls to Firebase to get portfolio Values, usings that  to eventually display the items
 function DiaryContainer() {
     const [chosenPortfolio, setChosenPortfolio] = useState("conservative")
     const [portfolioParams, setPortfolioParams] = useState([])
@@ -22,8 +23,8 @@ function DiaryContainer() {
     return (
         <div className="diaryContainer">
             <div className="spendingContainer">
-            <SelectPortfolio setChosenPortfolio={setChosenPortfolio} />
-            <SpendSave save={save} setSave={setSave} spend={spend} setSpend={setSpend} />
+                <SelectPortfolio setChosenPortfolio={setChosenPortfolio} />
+                <SpendSave save={save} setSave={setSave} spend={spend} setSpend={setSpend} />
             </div>
             {
                 save !== 0 || spend !== 0 ? (<DisplayPortfolioValues save={save} spend={spend} portfolioParams={portfolioParams} />) : null

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+//First Page gets some user info, passes it back to parent who will pass it to later child
 const ChatPage1 = (props) => {
     const [nameInput, setNameInput] = useState("")
     const [yearsInput, setYearsInput] = useState(0)
@@ -11,7 +12,7 @@ const ChatPage1 = (props) => {
         e.target.name === 'name'
             ? setNameInput(e.target.value)
             : e.target.name === 'retirementAmount'
-                ? setAmountInput(e.target.value)
+                ? (e.target.value > 50000000 ? setAmountInput(50000000) : setAmountInput(e.target.value))
                 : e.target.value > 50
                     ? setYearsInput(50)
                     : setYearsInput(e.target.value)

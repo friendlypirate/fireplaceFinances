@@ -1,9 +1,9 @@
-import './App.css';
 import { useState } from 'react';
 import AppMode from './AppMode'
-import ChatContainer from './ChatContainer'
 import DiaryContainer from './DiaryContainer'
+import ChatContainer from './ChatContainer'
 
+//App holds 3 main Components, Appmode sets which Finance tool to use, which renders the choice
 function App() {
   const [appMode, setAppMode] = useState("begin")
 

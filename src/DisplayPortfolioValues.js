@@ -1,5 +1,6 @@
 const DisplayPortfolioValues = (props) => {
     const { save, spend, portfolioParams } = props
+    //Function to return portfolio value given parameters
     const getPortfolioValue = (amount, years) => {
         return Math.round(amount * Math.pow((1 + portfolioParams[0]), years))
     }

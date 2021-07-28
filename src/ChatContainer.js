@@ -5,6 +5,7 @@ import ChatPage3 from './ChatPage3'
 import ChatPage4 from './ChatPage4'
 import { useState, useEffect } from 'react'
 
+//Chatcontainer houses the other portion of the app, and uses state to render each component when it is ready, it also houses all the states that will we eventually use to make our Monte Carlo Simulation
 const ChatContainer = () => {
     const [market, setMarket] = useState("cash")
     const [marketParams, setMarketParams] = useState([])

@@ -1,16 +1,17 @@
 import { useState } from 'react'
 
+//Same as Page1, gets user input, sets new state, passes back to parent
 const ChatPage2 = (props) => {
     const { setMarket, setAnnualSavings, setAmountSaved, setPageNumber, pageNumber } = props
-    const [savedInput, setSavedInput] = useState()
-    const [savingsInput, setSavingsInput] = useState()
+    const [savedInput, setSavedInput] = useState(0)
+    const [savingsInput, setSavingsInput] = useState(0)
     const [marketInput, setMarketInput] = useState("cash")
 
     const handleChange = (e) => {
         e.target.name === 'amountSaved'
-            ? setSavedInput(e.target.value)
+            ? (e.target.value > 50000000 ? setSavedInput(50000000) : setSavedInput(e.target.value))
             : e.target.name === 'annualSavings'
-                ? setSavingsInput(e.target.value)
+                ? (e.target.value > 50000000 ? setSavingsInput(50000000) : setSavingsInput(e.target.value))
                 : setMarketInput(e.target.value)
     }
 
@@ -33,11 +34,11 @@ const ChatPage2 = (props) => {
 
                 <div>
                     <label htmlFor="amountSaved">How much have you saved?</label>
-                    <input name="amountSaved" type="number" placeholder="10000" required onChange={handleChange} />
+                    <input name="amountSaved" value={savedInput} type="number" placeholder="10000" required onChange={handleChange} />
                 </div>
                 <div>
                     <label htmlFor="annualSavings">How much will you save each year?</label>
-                    <input name="annualSavings" type="number" placeholder="5000" required onChange={handleChange} />
+                    <input name="annualSavings" value={savingsInput} type="number" placeholder="5000" required onChange={handleChange} />
                 </div>
                 <div className="chatPage2SelectContainer">
                     <label htmlFor="market">

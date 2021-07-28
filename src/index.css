@@ -1,16 +1,3 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 @import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
@@ -25,10 +12,9 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* General Styles */
-
+/* General Styles - Got Button Styling Idea from Generator */
 html {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 body {
@@ -36,6 +22,7 @@ body {
   background-image: url(./Assets/christmas2.png);
   background-size: cover;
   max-width: 1080px;
+  min-width: 350px;
 }
 
 .app {
@@ -62,7 +49,7 @@ footer {
   height: 12.5vh;
 }
 
-Button {
+button {
 	box-shadow:inset 0px 1px 0px 0px #f5978e;
 	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
 	background-color:#f24537;
@@ -78,13 +65,21 @@ Button {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
 }
-Button:hover {
+
+button:hover,
+bUtton:focus {
 	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
 	background-color:#c62d1f;
 }
-Button:active {
+
+button:active {
 	position:relative;
 	top:1px;
+}
+
+input ,
+select {
+  border-radius: 0.3rem;
 }
 
 /* Header and Footer*/
@@ -98,6 +93,11 @@ header h1 {
   font-size: 1.8rem;
   margin-top: 1.75rem;
   padding: 0.5rem 0;
+}
+
+header h1,
+footer button,
+.appMode button {
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
   color: red;
   box-shadow:inset 0px 1px 0px 0px #f5978e;
@@ -108,18 +108,10 @@ header h1 {
 }
 
 footer button {
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-  color: red;
-  box-shadow:inset 0px 1px 0px 0px #f5978e;
-	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-	background-color: blue;
-	border-radius:6px;
-	border:1px solid #d02718;
   width: 100%;
 }
 
 /* AppMode Component */
-
 .appMode {
   display: flex;
   flex-direction: column;
@@ -127,17 +119,13 @@ footer button {
 
 .appMode button {
   margin: 1rem 0 1.5rem 0;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 3rem;
 }
 
 /* DiaryContainer Component */
-
 .diaryContainer {
   font-family: 'PT Sans', sans-serif;
   font-size: 0.8rem;
-  /* background-color: pink; */
-  /* padding: 1rem 1rem;
-  border-radius: 0.3rem; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -152,7 +140,7 @@ footer button {
   border-radius: 0.3rem;
   height: 80%;
   width: 42.5%;
-  max-width: 200px;
+  max-width: 262px;
 }
 
 .diaryContainer form,
@@ -160,8 +148,6 @@ footer button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* width: 90%; */
 }
 
 .diaryContainer label,
@@ -187,7 +173,7 @@ footer button {
   border-radius: 0.3rem;
   height: 80%;
   width: 42.5%;
-  max-width: 200px;
+  max-width: 262px;
 }
 
 .displayPortfolioValues h2 {
@@ -204,9 +190,6 @@ footer button {
 .chatContainer {
   font-family: 'PT Sans', sans-serif;
   font-size: 0.8rem;
-  /* background-color: pink; */
-  /* padding: 1rem 1rem;
-  border-radius: 0.3rem; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -221,23 +204,17 @@ footer button {
   border-radius: 0.3rem;
   height: 90%;
   width: 90%;
-  max-width: 400px;
+  max-width: 475px;
 }
 
 
-/* ChatPage1 */
+/* ChatPage1 and Chatpage2*/
 .chatPage1 form,
 .chatPage2 form {
   display: flex; 
   flex-direction: column;
   align-content: space-between;
-  /* text-align: left; */
 }
-
-/* .chatPage1 .nameContainer {
-  display: flex;
-  flex-direction: column;
-} */
 
 .chatPage1Form div,
 .chatPage2Form div {
@@ -250,7 +227,6 @@ footer button {
 .chatPage2 input,
 .chatPage2 select {
   width: 75%;
-  /* text-align: center; */
   margin: 0.25rem 0 0.35rem 0;
   border-radius: 0.3rem;
 }
@@ -262,22 +238,113 @@ footer button {
 
 }
 
-/* ChatPage2 */
-
 .chatPage2SelectContainer label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 0 auto; */
 }
 
-/* ChatPage3 */
+/* ChatPage3 -- I got one animation blueprint from Medium and the other one from a user on CodePen */
 
 .chatPage3ButtonContainer {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
+.chatPage3LoadingContainer {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.chatPage3LoadingContainer p {
+  font-size: 5rem;
+  margin: 1.5rem 0;
+  animation-name: swaying;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.chatPage3 h3{
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, pink, red, pink);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+}
+
+@keyframes swaying {
+  from {
+   transform: skewX(15deg);
+  }
+  
+  to {
+   transform: skewX(-15deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+
+
+/* ChatPage4 */
+.chatPage4 {
+  text-align: center;
+}
+
+.chatPage4 ul {
+  padding: 0 1rem;
+}
+
+.chatPage4 li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Media Queries */
+@media (min-width: 576px) {
+    html {
+      font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+
 
 
 
