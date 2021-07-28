@@ -1,13 +1,350 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* General Styles - Got Button Styling Idea from Generator */
+html {
+  font-size: 14px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'MonteCarlo', cursive;
+  background-image: url(./Assets/christmas2.png);
+  background-size: cover;
+  max-width: 1080px;
+  min-width: 350px;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.wrapper {
+  width: 80%;
+}
+
+main {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+header,
+footer {
+  height: 12.5vh;
+}
+
+button {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color: pink;
+  font-family: 'MonteCarlo', cursive;
+	font-size: 1.25rem;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+
+button:hover,
+bUtton:focus {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+input ,
+select {
+  border-radius: 0.3rem;
+}
+
+/* Header and Footer*/
+header,
+footer {
+  text-align: center;
+  width: 82.5%;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-top: 1.75rem;
+  padding: 0.5rem 0;
+}
+
+header h1,
+footer button,
+.appMode button {
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  color: red;
+  box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color: blue;
+	border-radius:6px;
+	border:1px solid #d02718;
+}
+
+footer button {
+  width: 100%;
+}
+
+/* AppMode Component */
+.appMode {
+  display: flex;
+  flex-direction: column;
+}
+
+.appMode button {
+  margin: 1rem 0 1.5rem 0;
+  padding: 0.25rem 3rem;
+}
+
+/* DiaryContainer Component */
+.diaryContainer {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+}
+
+.spendingContainer {
+  background-color: pink;
+  padding: 1rem 1rem;
+  border-radius: 0.3rem;
+  height: 80%;
+  width: 42.5%;
+  max-width: 262px;
+}
+
+.diaryContainer form,
+.diaryContainer select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.diaryContainer label,
+.diaryContainer select {
+  margin-top: 0.5rem;
+}
+
+.diaryContainer input {
+  width: 50%;
+  margin-top: 0.4rem;
+}
+
+.diaryContainer button {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+.displayPortfolioValues {
+  background-color: pink;
+  margin-left: 1.5%;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3rem;
+  height: 80%;
+  width: 42.5%;
+  max-width: 262px;
+}
+
+.displayPortfolioValues h2 {
+  font-size: 0.85rem;
+}
+
+.displayPortfolioValues ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* ChatContainer */
+
+.chatContainer {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+}
+
+.chatPage {
+  background-color: pink;
+  padding: 1rem 1rem;
+  border-radius: 0.3rem;
+  height: 90%;
+  width: 90%;
+  max-width: 475px;
+}
+
+
+/* ChatPage1 and Chatpage2*/
+.chatPage1 form,
+.chatPage2 form {
+  display: flex; 
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.chatPage1Form div,
+.chatPage2Form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chatPage1 input,
+.chatPage2 input,
+.chatPage2 select {
+  width: 75%;
+  margin: 0.25rem 0 0.35rem 0;
+  border-radius: 0.3rem;
+}
+
+.chatPage1 button,
+.chatPage2 button {
+  width: 75%;
+  margin: 0.3rem auto 0 auto;
+
+}
+
+.chatPage2SelectContainer label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ChatPage3 -- I got one animation blueprint from Medium and the other one from a user on CodePen */
+
+.chatPage3ButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.chatPage3LoadingContainer {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.chatPage3LoadingContainer p {
+  font-size: 5rem;
+  margin: 1.5rem 0;
+  animation-name: swaying;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.chatPage3 h3{
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, pink, red, pink);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+}
+
+@keyframes swaying {
+  from {
+   transform: skewX(15deg);
+  }
+  
+  to {
+   transform: skewX(-15deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+
+
+/* ChatPage4 */
+.chatPage4 {
+  text-align: center;
+}
+
+.chatPage4 ul {
+  padding: 0 1rem;
+}
+
+.chatPage4 li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Media Queries */
+@media (min-width: 576px) {
+    html {
+      font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+
+
+
+
