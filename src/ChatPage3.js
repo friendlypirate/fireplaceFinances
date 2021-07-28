@@ -17,7 +17,7 @@ const ChatPage3 = (props) => {
     }
 
     return (
-        <div>
+        <div className="chatPage chatPage3">
             {
                 generateResults === 1
                     ? <p>What a lovely story you have {name}, full of intrigue and wonder.  I see you have {amountSaved > 0 ? "started saving for your retirement, that puts you ahead of many of your peers" : "have not started saving for your retirement yet, but we are here to help you with that"}.  Your choice to {annualSavings > 0 ? "start regular savings will go far in achieving your retirement plans" : "not start regular savings is understandable, but we will try to work around it"}.  The greatest asset you have is {retirementYears > 20 ? "time frame, there is plenty of time to grow your portfolio" : "that you seeked financial advice, we can help you maximize your savings and achieve your retirement dreams"}.</p>
@@ -29,7 +29,7 @@ const ChatPage3 = (props) => {
 
             }
             {
-                generateResults !== 4 ? <button onClick={handleClick}>Read more</button> : null
+                generateResults !== 4 ? <div className="chatPage3ButtonContainer"><button onClick={handleClick}>Read more</button></div> : null
             }
         </div>
     )

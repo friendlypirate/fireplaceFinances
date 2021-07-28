@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app wrapper">
       <header>
         <h1>Fireplace Finances</h1>
       </header>

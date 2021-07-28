@@ -20,9 +20,11 @@ function DiaryContainer() {
     }, [chosenPortfolio])
 
     return (
-        <div className="App">
+        <div className="diaryContainer">
+            <div className="spendingContainer">
             <SelectPortfolio setChosenPortfolio={setChosenPortfolio} />
             <SpendSave save={save} setSave={setSave} spend={spend} setSpend={setSpend} />
+            </div>
             {
                 save !== 0 || spend !== 0 ? (<DisplayPortfolioValues save={save} spend={spend} portfolioParams={portfolioParams} />) : null
             }

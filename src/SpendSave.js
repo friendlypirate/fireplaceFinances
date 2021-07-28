@@ -21,7 +21,7 @@ const SpendSave = (props) => {
 
   return (
     <form action="submit">
-      <label>How much did you save today?</label>
+      <label>Daily savings:</label>
         <input 
           type="number"
           name="save"
@@ -29,7 +29,7 @@ const SpendSave = (props) => {
           onChange={handleChange}
           required
         />
-      <label>How much did you spend today?</label>
+      <label>Daily expenses:</label>
         <input
           type="number"
           name="spend"

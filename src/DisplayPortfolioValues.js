@@ -5,19 +5,21 @@ const DisplayPortfolioValues = (props) => {
     }
 
     return (
-        <div>
-            <h2>Total Savings: {save}</h2>
+        <div className="displayPortfolioValues">
+            <h2>Total Savings:</h2>
+            <h2>${save.toLocaleString()}</h2>
             <ul>
-                <li>Value in 5 years: {getPortfolioValue(save, 5)}</li>
-                <li>Value in 10 years: {getPortfolioValue(save, 10)}</li>
-                <li>Value in 25 years: {getPortfolioValue(save, 25)}</li>
+                <li> 5-yrs: {getPortfolioValue(save, 5).toLocaleString()}</li>
+                <li>10-yrs: ${getPortfolioValue(save, 10).toLocaleString()}</li>
+                <li>25-yrs: ${getPortfolioValue(save, 25).toLocaleString()}</li>
             </ul>
 
-            <h2>Total Spending: {spend}</h2>
+            <h2>Total Spending:</h2>
+            <h2>${spend.toLocaleString()}</h2>
             <ul>
-                <li>Value loss in 5 years: {getPortfolioValue(spend, 5)}</li>
-                <li>Value loss in 10 years: {getPortfolioValue(spend, 10)}</li>
-                <li>Value loss in 25 years: {getPortfolioValue(spend, 25)}</li>
+                <li> 5-yrs loss: {getPortfolioValue(spend, 5).toLocaleString()}</li>
+                <li>10-yrs loss: {getPortfolioValue(spend, 10).toLocaleString()}</li>
+                <li>25-yrs loss: {getPortfolioValue(spend, 25).toLocaleString()}</li>
             </ul>
         </div>
     )

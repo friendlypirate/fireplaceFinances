@@ -38,7 +38,7 @@ const ChatPage4 = (props) => {
 
 
     return (
-        <div>
+        <div className="chatPage chatPage4">
             <h2>Monte Carlo Simulation Results</h2>
             <ul>
                 <li>Probability of Success: {percentageSuccess}%</li>

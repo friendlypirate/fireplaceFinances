@@ -25,7 +25,7 @@ const ChatContainer = () => {
     }, [market])
 
     return (
-        <div>
+        <div className="chatContainer">
             {
                 pageNumber === 1
                     ? <ChatPage1 setName={setName} setRetirementAmount={setRetirementAmount} setRetirementYears={setRetirementYears} setPageNumber={setPageNumber} pageNumber={pageNumber} />

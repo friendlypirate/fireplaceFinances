@@ -31,26 +31,23 @@ const ChatPage1 = (props) => {
     }
 
     return (
-        <div>
-            <p>Hello friend, have a seat! The fire is warm and the whiskey is chilled. Tell me a little about yourself...</p>
-            <form className="about-you">
-                <div className="container">
-
-                    <div className="name-container">
-                        <label htmlFor="name">Name</label>
-                        <input type="text" id="name" name="name" value={nameInput} required placeholder="Jane Doe" onChange={handleChange} />
-                    </div>
-
-                    <div className="yearsContainer">
-                        <label htmlFor="retirementYears">How many years until retirement?</label>
-                        <input type="number" id="retirementYears" value={yearsInput} required name="retirementYears" placeholder="25" onChange={handleChange} />
-                    </div>
+        <div className="chatPage chatPage1">
+            <p>Hello friend! The fire is warm and the whiskey is chilled. Tell me a little about yourself...</p>
+            <form className="chatPage1Form">
+                <div className="nameContainer">
+                    <label htmlFor="name">Name/Alias:</label>
+                    <input type="text" id="name" name="name" value={nameInput} required placeholder="Jane Doe" onChange={handleChange} />
+                </div>
+                <div>
+                    <label htmlFor="retirementAmount">Retirement fund needed:</label>
+                    <input id="retirementAmount" type="number" placeholder="100000" name="retirementAmount" value={amountInput} required onChange={handleChange} />
+                </div>
+                <div className="yearsContainer">
+                    <label htmlFor="retirementYears">Years until retirement:</label>
+                    <input type="number" id="retirementYears" value={yearsInput} required name="retirementYears" placeholder="25" onChange={handleChange} />
                 </div>
 
-                <label htmlFor="retirementAmount">How much will you need when retired?</label>
-                <input id="retirementAmount" type="number" placeholder="100000" name="retirementAmount" value={amountInput} required onChange={handleChange} />
-
-                <button className="btn btn-primary" onClick={handleClick}>Send</button>
+                <button onClick={handleClick}>Send</button>
             </form>
         </div>
     )
