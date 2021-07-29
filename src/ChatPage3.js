@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-//Component renders conditional information based on users inputs, then explains the need for a Monte Carlo, adding a rendering of "Loading" portion at the end to let user visualize the Monte Carlo Call.
+//Component renders conditional information based on users inputs, then explains the need for a Monte Carlo, adding a rendering of "Loading" portion at the end to let user visualize the Monte Carlo Call.  I found how to do the animations online.  The skewing was relatively simple, the other one was a more complicated, I copied the code and just changed a few things to my liking.  The code was found on Code Pen.  
 const ChatPage3 = (props) => {
     const { name, retirementYears, annualSavings, amountSaved, setPageNumber, pageNumber } = props
     const [generateResults, setGenerateResults] = useState(1)

@@ -1,4 +1,4 @@
-//The last component to Chat, it houses a two functions, one that uses a known formula to get a random variable in a normal distribution given Mean and SD.  The Other function Simulations uses the first function to generate an array of yearly gains that we then use to figure out ending portfolio value.  It does this 1000 times thus producing our Monte Carlo simulation.  The rest of the functions are used show vital information to the user.
+//The last component to Chat, it houses a two functions, one that uses a formula to get a random variable in a normal distribution given Mean and SD.  The Other function Simulations uses the first function to generate an array of yearly gains that we then use to figure out ending portfolio value.  It does this 1000 times thus producing our Monte Carlo simulation.  The rest of the functions are used show vital information to the user.
 const ChatPage4 = (props) => {
     const { retirementYears, annualSavings, amountSaved, marketParams, retirementAmount } = props
     const monteCarloSimulations = []

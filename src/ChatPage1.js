@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-//First Page gets some user info, passes it back to parent who will pass it to later child
+//First Page gets some user info, passes it back to parent who will pass later to another child
 const ChatPage1 = (props) => {
     const [nameInput, setNameInput] = useState("")
     const [yearsInput, setYearsInput] = useState(0)
